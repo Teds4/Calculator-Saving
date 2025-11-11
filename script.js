@@ -94,7 +94,7 @@ function calculateSavings() {
 
   // Tentukan motivasi
   if (saving > 0) {
-    kata.textContent = "GGWP!";
+    kata.textContent = "Good Job!";
     motivation.textContent = "Sesuai target, Mantap! 💪";
     kata.style.color = "#1c7430"; // hijau
   } else {
@@ -125,3 +125,4 @@ clearBtn.addEventListener("click", (e) => {
   e.preventDefault();
   clearAll();
 });
+
