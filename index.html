@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container">
+      <div class="kalkulator">
+        <div class="form">
+          <!-- Header -->
+          <div class="header">
+            <!-- Logo -->
+            <h1>CALCULATOR SAVING <span>Q3 2025</span></h1>
+          </div>
+
+          <!-- Penghapus -->
+          <div class="clear">
+            <a href="#" id="clearAll">Clear all</a>
+          </div>
+
+          <!-- Plant -->
+
+          <div class="plant">
+            <label for="plant">Plant</label>
+            <br />
+            <select name="plant" id="plant">
+              <option class="placeholder" disabled selected>
+                -- Select Plant --
+              </option>
+              <option value="satu">Satu</option>
+              <option value="dua">Dua</option>
+              <option value="tiga">Tiga</option>
+              <option value="empat">Empat</option>
+            </select>
+          </div>
+
+          <!-- Category -->
+          <div class="category">
+            <label for="category">Category</label>
+            <br />
+            <select name="category" id="category">
+              <option disabled selected class="placeholder">
+                -- Select Category --
+              </option>
+              <option value="electricity">Electricity</option>
+              <option value="water">Water</option>
+              <option value="fuel">Fuel</option>
+            </select>
+          </div>
+
+          <!-- Tabel input -->
+          <div class="tabel">
+            <table>
+              <thead>
+                <tr>
+                  <th>Before</th>
+                  <th>After</th>
+                  <th>Output</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Baris hasil akan ditambahkan otomatis lewat JavaScript -->
+                <tr class="formula" id="formula">
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr class="inputan">
+                  <td><input type="number" placeholder="-Input after-" /></td>
+                  <td><input type="number" placeholder="-Input before-" /></td>
+                  <td><input type="number" placeholder="-Input output-" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ringkasan -->
+      <div class="ringkasan">
+        <h1>Savings</h1>
+
+        <!-- Tabel hasil -->
+
+        <!-- Grand total di bawah tabel -->
+        <div class="savings">
+          <span>Rp</span>
+          <span id="savings">-</span>
+        </div>
+
+        <!-- Kata kata -->
+        <div class="kata-kata">
+          <h1 id="kata">Kata-kata</h1>
+          <p id="motivation">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+            totam iste exercitationem, reprehenderit officiis molestias itaque?
+            Quod amet provident velit iste! Maiores saepe libero atque
+            exercitationem accusamus! Quas, quae obcaecati.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
