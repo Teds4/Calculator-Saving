@@ -250,7 +250,7 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
     padding: 1.3rem 1.3rem 1rem 2rem;
     position: fixed;
-    height: 80%;
+    height: 61%;
   }
 
   select {
@@ -265,18 +265,14 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 15px;
   }
 
-  .category select {
-    margin-bottom: 0;
-  }
-
   .ringkasan {
     width: 100%;
     border-radius: 0;
     box-shadow: none;
-    margin-top: 1rem;
     padding: 1rem;
     position: fixed;
     bottom: 0;
+    height: 40%;
   }
 
   .ringkasan h1 {
@@ -290,7 +286,10 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .ringkasan .kata-kata {
-    margin-top: auto;
+    margin-top: 0;
+  }
+
+  .inputan input {
+    font-size: 15px;
   }
 }
-
