@@ -18,8 +18,8 @@ const plantMultiplier = {
 
 // Variabel tarif dan harga per kategori
 const categorySettings = {
-  electricity: { label: "Electricity", rate: 1600 },
-  water: { label: "Water", rate: 12 },
+  electricity: { label: "Electricity", rate: 16000 },
+  water: { label: "Water", rate: 12000 },
   fuel: { label: "Fuel", rate: 15000 },
 };
 
@@ -109,11 +109,12 @@ function calculateSavings() {
 function clearAll() {
   inputs.forEach((i) => (i.value = ""));
   savingsDisplay.textContent = "-";
-  kata.textContent = "Kata-kata";
-  motivation.textContent = "Isi data untuk melihat hasil perhitunganmu.";
+  kata.textContent = "Semangat!";
+  motivation.textContent = "Semoga hari anda menyenangkan, sukses selalu!";
   formulaRow.innerHTML = "<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>";
   categorySelect.selectedIndex = 0;
   plantSelect.selectedIndex = 0;
+  kata.style.color = "#ffff";
 }
 
 // Event listener
