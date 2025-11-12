@@ -8,6 +8,10 @@ const kata = document.getElementById("kata");
 const motivation = document.getElementById("motivation");
 const clearBtn = document.getElementById("clearAll");
 
+document.getElementById("edit").addEventListener("click", function () {
+  window.location.href = "editData.html";
+});
+
 // Data rate per kategori & plant
 const rateData = {
   electricity: { satu: 16000, dua: 15000, tiga: 17000, empat: 20000 },
@@ -73,7 +77,9 @@ function calculateSavings() {
   }
 
   // Ambil rate berdasarkan kategori & plant
-  const rate = rateData[category]?.[plant] || 0;
+  const savedRates = JSON.parse(localStorage.getItem("rates") || "{}");
+  const rate =
+    savedRates?.[category]?.[plant] || rateData[category]?.[plant] || 0;
   let saving = 0;
 
   switch (category) {
@@ -128,3 +134,4 @@ clearBtn.addEventListener("click", (e) => {
   e.preventDefault();
   clearAll();
 });
+
