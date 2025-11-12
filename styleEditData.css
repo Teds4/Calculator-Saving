@@ -1,0 +1,257 @@
+@font-face {
+  font-family: jakarta;
+  src: url(PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(88, 160, 200, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  width: 62rem;
+  height: 32rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  font-family: jakarta;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+h1 {
+  margin: 0 16.5rem;
+  height: 3.2rem;
+  font-family: jakarta, sans-serif;
+  color: #113f67;
+  text-align: center;
+  align-content: center;
+  background: #c7d70e;
+  border-radius: 17px;
+  font-size: 35px;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  color: #0a2c4a;
+}
+
+th,
+td {
+  border: 2px solid #113f67;
+  text-align: center;
+  padding: 0.6rem;
+}
+
+td:hover {
+  background-color: #c7d70e;
+}
+
+th:hover {
+  background-color: #c7d70e;
+}
+
+input[type="number"] {
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #0a2c4a;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.saves {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  color: #0a2c4a;
+  font-size: 1rem;
+  margin-top: 0.7rem;
+}
+
+/* button */
+.saves button {
+  background: #113f67;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+.saves button:hover {
+  background: #0a2c4a;
+}
+
+.saves button:active {
+  background: #205d93;
+}
+
+.back {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+
+.back-link {
+  align-content: flex-end;
+  text-decoration: none;
+  color: #2c77b8;
+  right: 0;
+  font-size: 20px;
+  display: inline-block;
+  transition: linear 1s;
+}
+
+.back-link span:after {
+  content: "";
+  display: block;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #0a2c4a;
+  transform: scaleX(0%);
+  transition: linear 0.3s;
+}
+
+.back-link span:hover::after {
+  transform: scaleX(100%);
+  margin-left: 1rem;
+}
+
+.back-link:hover {
+  color: #0a2c4a;
+}
+
+@media (max-width: 780px) {
+  @media (max-width: 768px) {
+    body {
+      height: auto;
+      align-items: flex-start;
+    }
+
+    .container {
+      width: 95%;
+      height: 95%;
+      border-radius: 1rem;
+      margin: 1rem 0.5rem;
+      padding: 1.5rem;
+    }
+
+    h1 {
+      margin: 0 auto;
+      font-size: 1.8rem;
+      width: 100%;
+      background: #c7d70e;
+      border-radius: 1rem;
+    }
+
+    table {
+      font-size: 0.9rem;
+    }
+
+    th,
+    td {
+      padding: 0.4rem;
+    }
+
+    input[type="number"] {
+      font-size: 0.9rem;
+    }
+
+    .saves {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .saves p {
+      font-size: 0.9rem;
+    }
+
+    .saves button {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+    }
+
+    .back {
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .back-link {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      height: 100vh;
+    }
+
+    .container {
+      width: 95%;
+      height: 95%;
+      border-radius: 1rem;
+      margin: 1rem 0.5rem;
+      padding: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    th,
+    td {
+      min-width: 90px;
+    }
+
+    .saves button {
+      font-size: 0.9rem;
+    }
+
+    .back-link {
+      font-size: 0.9rem;
+    }
+  }
+}
