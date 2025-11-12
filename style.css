@@ -25,12 +25,13 @@ body {
   overflow: hidden;
   display: flex;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  overflow-x: auto;
 }
 
 .kalkulator {
   flex: 0 0 55%;
   display: flex;
-
   flex-direction: column;
   padding: 2rem 0 2rem 2rem;
   background-color: white;
@@ -54,7 +55,7 @@ body {
   font-size: 37px;
   word-spacing: 4px;
   color: #113f67;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .header span {
@@ -196,6 +197,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 1.5rem; /* beri jarak di sekitar */
   border-bottom-left-radius: 3rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .ringkasan h1 {
@@ -217,6 +219,7 @@ input[type="number"]::-webkit-outer-spin-button {
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .ringkasan .savings #savings {
@@ -226,6 +229,31 @@ input[type="number"]::-webkit-outer-spin-button {
 .kata-kata {
   text-align: center;
   margin-top: 2rem;
+}
+
+.edit-data {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  margin: 1rem;
+}
+
+.edit-data button {
+  width: 5rem;
+  height: 2rem;
+  color: #113f67;
+  background-color: #c7d70e;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.edit-data button:hover {
+  background-color: #a1af0c;
+}
+
+.edit-data button:active {
+  background-color: #bfcf16;
 }
 
 /* ==================== */
@@ -243,13 +271,16 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
     height: auto;
     border-radius: 0;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: relative;
   }
 
   .kalkulator {
     flex: none;
     width: 100%;
-    padding: 1.3rem 1.3rem 1rem 2rem;
-    position: fixed;
+    padding: 1.3rem 1.3rem 1rem 1.5rem;
+    position: relative;
     height: 61%;
   }
 
@@ -258,7 +289,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .header h1 {
-    font-size: 1.5rem;
+    font-size: 26px;
   }
 
   .clear a {
@@ -270,14 +301,15 @@ input[type="number"]::-webkit-outer-spin-button {
     border-radius: 0;
     box-shadow: none;
     padding: 1rem;
-    position: fixed;
+    position: relative;
     bottom: 0;
-    height: 40%;
+    height: 100%;
   }
 
   .ringkasan h1 {
     font-size: 1.5rem;
     text-align: center;
+    margin: 0;
   }
 
   .ringkasan .savings {
@@ -286,10 +318,31 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .ringkasan .kata-kata {
-    margin-top: 0;
+    margin: 1rem 0;
+    position: relative;
+  }
+
+  .ringkasan p {
+    margin: 0.7rem 0;
   }
 
   .inputan input {
-    font-size: 15px;
+    font-size: 13px;
+  }
+
+  .edit-data {
+    bottom: 0;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .edit-data button {
+    position: relative;
   }
 }
