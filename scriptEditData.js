@@ -1,17 +1,15 @@
-// === Default rate awal ===
+//  rate awal 
 const defaultRates = {
   electricity: { satu: 16000, dua: 15000, tiga: 17000, empat: 20000 },
   water: { satu: 12000, dua: 13500, tiga: 14000, empat: 16000 },
   fuel: { satu: 15000, dua: 14000, tiga: 17000, empat: 19000 },
 };
 
-// === Ambil rate dari localStorage (kalau ada) ===
+// rate dari local strage
 const savedRates = JSON.parse(localStorage.getItem("rates") || "{}");
 
-// Gabungkan default dan yang tersimpan
 const rateData = { ...defaultRates };
 
-// Perbarui dengan nilai tersimpan, jika ada
 Object.keys(savedRates).forEach((cat) => {
   if (!rateData[cat]) rateData[cat] = {};
   Object.keys(savedRates[cat]).forEach((plant) => {
@@ -19,7 +17,7 @@ Object.keys(savedRates).forEach((cat) => {
   });
 });
 
-// === Buat tabel ===
+// tabel
 const tbody = document.querySelector("#rateTable tbody");
 tbody.innerHTML = "";
 
@@ -47,7 +45,7 @@ Object.keys(rateData).forEach((category) => {
   tbody.appendChild(row);
 });
 
-// === Simpan perubahan ===
+// tumbul simpan
 document.getElementById("saveRates").addEventListener("click", () => {
   const inputs = document.querySelectorAll("input[data-category]");
   const updatedRates = {};
@@ -61,12 +59,11 @@ document.getElementById("saveRates").addEventListener("click", () => {
     updatedRates[category][plant] = value;
   });
 
-  // Simpan ke localStorage
+  // Simpen ke local storage
   localStorage.setItem("rates", JSON.stringify(updatedRates));
   alert("✅ Rate berhasil disimpan!");
 });
 
-// === Hilangkan efek hover saat input aktif ===
 const tableCells = document.querySelectorAll("td");
 
 tableCells.forEach((cell) => {
@@ -80,3 +77,4 @@ tableCells.forEach((cell) => {
     });
   }
 });
+
