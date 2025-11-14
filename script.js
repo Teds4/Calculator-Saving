@@ -1,4 +1,4 @@
-// Ambil elemen-elemen penting
+
 const categorySelect = document.getElementById("category");
 const plantSelect = document.getElementById("plant");
 const inputs = document.querySelectorAll(".inputan input");
@@ -19,7 +19,7 @@ const rateData = {
   fuel: { satu: 15000, dua: 14000, tiga: 17000, empat: 19000 },
 };
 
-// Fungsi untuk update satuan di tabel rumus bawah kolom
+// Fungsi tabel rumus bawah kolom
 function updateFormula() {
   const category = categorySelect.value;
   let beforeUnit = "";
@@ -52,11 +52,10 @@ function updateFormula() {
     <td style="text-align:center; font-weight:bold;">${outputUnit}</td>
   `;
 
-  // 🔧 Tambahkan ini agar rate ikut berubah saat kategori berubah
   calculateSavings();
 }
 
-// Fungsi untuk menghitung hasil saving
+// Fungsi hasil saving
 function calculateSavings() {
   const category = categorySelect.value;
   const plant = plantSelect.value;
@@ -76,7 +75,7 @@ function calculateSavings() {
     return;
   }
 
-  // Ambil rate berdasarkan kategori & plant
+  // Ambil rate kategori & plant
   const savedRates = JSON.parse(localStorage.getItem("rates") || "{}");
   const rate =
     savedRates?.[category]?.[plant] || rateData[category]?.[plant] || 0;
@@ -94,10 +93,10 @@ function calculateSavings() {
       break;
   }
 
-  // Tampilkan hasil ke ringkasan
+  // hasil ringkasan
   savingsDisplay.textContent = saving.toLocaleString("id-ID");
 
-  // Tentukan motivasi
+  // motivasi
   if (saving > 0) {
     kata.textContent = "Good Job!";
     motivation.textContent = "Sesuai target, Mantap! 💪";
@@ -114,7 +113,7 @@ function calculateSavings() {
   }
 }
 
-// Fungsi untuk reset semua input
+// reset
 function clearAll() {
   inputs.forEach((i) => (i.value = ""));
   savingsDisplay.textContent = "-";
@@ -126,7 +125,6 @@ function clearAll() {
   kata.style.color = "#fff";
 }
 
-// Event listener
 categorySelect.addEventListener("change", updateFormula);
 inputs.forEach((input) => input.addEventListener("input", calculateSavings));
 plantSelect.addEventListener("change", calculateSavings);
@@ -134,4 +132,5 @@ clearBtn.addEventListener("click", (e) => {
   e.preventDefault();
   clearAll();
 });
+
 
