@@ -192,22 +192,22 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: jakarta;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* letakkan konten dari atas */
-  align-items: center; /* rata kiri */
-  padding: 1.5rem; /* beri jarak di sekitar */
+  justify-content: flex-start;
+  align-items: center; 
+  padding: 1.5rem; 
   border-bottom-left-radius: 3rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   position: relative;
 }
 
 .ringkasan h1 {
-  align-self: flex-start; /* pastikan heading tetap di kiri */
+  align-self: flex-start;
   margin: 1rem 0 1rem 0;
   color: #fff;
   font-size: 2rem;
 }
 
-/* styling untuk grand total yang berada di bawah tabel */
+/* styling untuk grand total yg berada di bawah tabel */
 .ringkasan .savings {
   width: 90%;
   margin: 0.8rem auto 0;
@@ -256,9 +256,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #bfcf16;
 }
 
-/* ==================== */
-/* RESPONSIVE DESIGN 📱 */
-/* ==================== */
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 680px) {
   body {
@@ -267,7 +265,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .container {
-    flex-direction: column; /* ubah dari sejajar ke vertikal */
+    flex-direction: column; 
     width: 100%;
     height: auto;
     border-radius: 0;
@@ -346,3 +344,4 @@ input[type="number"]::-webkit-outer-spin-button {
     position: relative;
   }
 }
+
